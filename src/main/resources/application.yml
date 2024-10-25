@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:2200/freight_fox_assignment?allowPublicKeyRetrieval=true&useSSL=false
+    username: piyush
+    password: piyush
+
+  #JPA Settings
+  jpa:
+    hibernate:
+      ddl-auto: create

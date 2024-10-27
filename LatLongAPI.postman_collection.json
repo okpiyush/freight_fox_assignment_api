@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "e8f52efa-8c9c-4494-8ac9-be6e0bb11046",
+		"name": "LatLongAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20871330"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/distance/pol=560078&&pod=733134",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/distance/pol=560078&&pod=733134",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"distance",
+						"pol=560078&&pod=733134"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/weather/zip=560078",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/weather/zip=560078",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"weather",
+						"zip=560078"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

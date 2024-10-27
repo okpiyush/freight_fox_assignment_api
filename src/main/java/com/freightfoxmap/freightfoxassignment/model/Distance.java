@@ -4,7 +4,9 @@ package com.freightfoxmap.freightfoxassignment.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="distance_between")
+@Table(name="distance_between", indexes = {
+        @Index(name= "pincode_index", columnList = "originPincode, destinationPincode")
+})
 public class Distance {
 
     @Id

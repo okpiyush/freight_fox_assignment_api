@@ -4,7 +4,9 @@ package com.freightfoxmap.freightfoxassignment.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="location_info")
+@Table(name="location_info", indexes = {
+        @Index(name = "pincode_index", columnList = "pincode")
+})
 public class Location {
 
     @Id

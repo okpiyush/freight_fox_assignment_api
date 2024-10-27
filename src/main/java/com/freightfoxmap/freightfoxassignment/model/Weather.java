@@ -5,18 +5,21 @@ import jakarta.persistence.*;
 import java.util.HashMap;
 
 @Entity
-@Table(name="weather_info")
+@Table(name="weather_info", indexes = {
+        @Index(name = "lat_lon_time", columnList= "lat, lon")
+})
 public class Weather {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private int lat;
-    private int lon;
+    private double lat;
+    private double lon;
 
-    private String time;
+    private long time;
 
     private String weather;
+
 
     public int getId() {
         return id;
@@ -26,7 +29,7 @@ public class Weather {
         this.id = id;
     }
 
-    public int getLat() {
+    public double getLat() {
         return lat;
     }
 
@@ -34,7 +37,7 @@ public class Weather {
         this.lat = lat;
     }
 
-    public int getLon() {
+    public double getLon() {
         return lon;
     }
 
@@ -42,11 +45,11 @@ public class Weather {
         this.lon = lon;
     }
 
-    public String getTime() {
+    public long getTime() {
         return time;
     }
 
-    public void setTime(String time) {
+    public void setTime(long time) {
         this.time = time;
     }
 
@@ -61,7 +64,7 @@ public class Weather {
     public Weather() {
     }
 
-    public Weather(int id, int lat, int lon, String time, String weather) {
+    public Weather(double lat, double lon, long time, String weather) {
         this.id = id;
         this.lat = lat;
         this.lon = lon;
